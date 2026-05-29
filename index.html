@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folio — Creative Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ───── NAVIGATION ───── -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="Folio home">
+        <span class="logo-mark">F</span>
+        <span class="logo-text">OLIO</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav-desktop" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+      </nav>
+
+      <!-- Mobile hamburger — Popover API, zero JS -->
+      <button
+        class="hamburger"
+        popovertarget="mobile-menu"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile popover menu -->
+    <nav
+      id="mobile-menu"
+      popover
+      class="nav-mobile"
+      aria-label="Mobile navigation"
+    >
+      <button
+        class="close-btn"
+        popovertarget="mobile-menu"
+        popovertargetaction="hide"
+        aria-label="Close menu"
+      >✕</button>
+      <a href="#work"     popovertarget="mobile-menu" popovertargetaction="hide">Work</a>
+      <a href="#about"    popovertarget="mobile-menu" popovertargetaction="hide">About</a>
+      <a href="#services" popovertarget="mobile-menu" popovertargetaction="hide">Services</a>
+      <a href="#journal"  popovertarget="mobile-menu" popovertargetaction="hide">Journal</a>
+      <a href="#contact"  popovertarget="mobile-menu" popovertargetaction="hide" class="nav-cta-mobile">Let's Talk</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ───── HERO ───── -->
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span class="mono">Est. 2024 — Creative Studio</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="line line-1">We craft</span>
+        <span class="line line-2 italic">experiences</span>
+        <span class="line line-3">that move.</span>
+      </h1>
+
+      <div class="hero-sub-row">
+        <p class="hero-body">
+          Design-led studio building brands and digital products for founders who refuse to be ordinary.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#work" class="btn-primary">View Selected Work</a>
+          <a href="#about" class="btn-ghost">Our Process ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Brand Identity</span><span class="sep">✦</span>
+          <span>Web Design</span><span class="sep">✦</span>
+          <span>Motion</span><span class="sep">✦</span>
+          <span>Editorial</span><span class="sep">✦</span>
+          <span>Strategy</span><span class="sep">✦</span>
+          <span>Brand Identity</span><span class="sep">✦</span>
+          <span>Web Design</span><span class="sep">✦</span>
+          <span>Motion</span><span class="sep">✦</span>
+          <span>Editorial</span><span class="sep">✦</span>
+          <span>Strategy</span><span class="sep">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── STATS STRIP ───── -->
+    <section class="stats-strip" aria-label="Studio statistics">
+      <div class="stat">
+        <span class="stat-num">84</span>
+        <span class="stat-label mono">Projects Shipped</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">12</span>
+        <span class="stat-label mono">Countries</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">6</span>
+        <span class="stat-label mono">Years Running</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat">
+        <span class="stat-num">3×</span>
+        <span class="stat-label mono">Awwwards Winner</span>
+      </div>
+    </section>
+
+    <!-- ───── WORK ───── -->
+    <section class="work-section" id="work" aria-label="Selected work">
+      <div class="section-header">
+        <span class="section-tag mono">01 — Selected Work</span>
+        <h2 class="section-title">Recent<br/><em>Projects</em></h2>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work-card work-card--featured">
+          <div class="work-card__img" style="background-color:#c8b8a2;" aria-hidden="true">
+            <div class="work-card__img-overlay"></div>
+            <span class="work-card__number mono">01</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__tags">
+              <span class="tag">Brand Identity</span>
+              <span class="tag">Web</span>
+            </div>
+            <h3 class="work-card__title">Terra Collective</h3>
+            <p class="work-card__desc">A sustainable goods platform rebuilt from the ground up — new visual language, e-commerce, and editorial blog.</p>
+            <a href="#" class="work-card__link mono">View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__img" style="background-color:#3d3530;" aria-hidden="true">
+            <div class="work-card__img-overlay"></div>
+            <span class="work-card__number mono">02</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__tags">
+              <span class="tag">Motion</span>
+              <span class="tag">Editorial</span>
+            </div>
+            <h3 class="work-card__title">Nomad Press</h3>
+            <p class="work-card__desc">Annual report and motion campaign for an independent publishing house.</p>
+            <a href="#" class="work-card__link mono">View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__img" style="background-color:#b85c38;" aria-hidden="true">
+            <div class="work-card__img-overlay"></div>
+            <span class="work-card__number mono">03</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__tags">
+              <span class="tag">Strategy</span>
+              <span class="tag">Brand</span>
+            </div>
+            <h3 class="work-card__title">Sable Finance</h3>
+            <p class="work-card__desc">Positioning, naming, and complete visual identity for a fintech challenger brand.</p>
+            <a href="#" class="work-card__link mono">View Project →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__img" style="background-color:#7a8c6e;" aria-hidden="true">
+            <div class="work-card__img-overlay"></div>
+            <span class="work-card__number mono">04</span>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__tags">
+              <span class="tag">Web Design</span>
+            </div>
+            <h3 class="work-card__title">Oikos Studio</h3>
+            <p class="work-card__desc">Portfolio and booking platform for a Berlin-based architecture practice.</p>
+            <a href="#" class="work-card__link mono">View Project →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ───── ABOUT ───── -->
+    <section class="about-section" id="about" aria-label="About the studio">
+      <div class="about-grid">
+        <div class="about-image-col" aria-hidden="true">
+          <div class="about-image-block about-image-block--1"></div>
+          <div class="about-image-block about-image-block--2">
+            <span class="about-image-label mono">Studio, 2024</span>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <span class="section-tag mono">02 — About</span>
+          <h2 class="about-title">Small team.<br/><em>Outsized</em> impact.</h2>
+          <p class="about-body">
+            We are a studio of four — designers, strategists, and developers who believe the best work happens when craft and clarity share the same table.
+          </p>
+          <p class="about-body">
+            No bloated retainers. No junior handoffs. Every project gets our full attention from brief to launch.
+          </p>
+          <div class="about-pills">
+            <span class="pill">Brand Strategy</span>
+            <span class="pill">Visual Identity</span>
+            <span class="pill">Web Development</span>
+            <span class="pill">Motion Design</span>
+            <span class="pill">Editorial Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── SERVICES ───── -->
+    <section class="services-section" id="services" aria-label="Services">
+      <div class="services-header">
+        <span class="section-tag mono">03 — Services</span>
+        <h2 class="section-title">What we<br/><em>do</em></h2>
+      </div>
+      <div class="services-list" role="list">
+
+        <div class="service-item" role="listitem">
+          <span class="service-num mono">01</span>
+          <div class="service-content">
+            <h3 class="service-name">Brand Identity</h3>
+            <p class="service-desc">Naming, logo, colour, type, tone of voice — everything a brand needs to own its space.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <span class="service-num mono">02</span>
+          <div class="service-content">
+            <h3 class="service-name">Web Design &amp; Dev</h3>
+            <p class="service-desc">Responsive, accessible, performance-first websites built with real code — not templates.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <span class="service-num mono">03</span>
+          <div class="service-content">
+            <h3 class="service-name">Motion &amp; Video</h3>
+            <p class="service-desc">Brand films, animated identities, and social content that actually stops the scroll.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </div>
+
+        <div class="service-item" role="listitem">
+          <span class="service-num mono">04</span>
+          <div class="service-content">
+            <h3 class="service-name">Editorial Design</h3>
+            <p class="service-desc">Annual reports, magazines, books, and long-form publications worth keeping.</p>
+          </div>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ───── JOURNAL ───── -->
+    <section class="journal-section" id="journal" aria-label="Journal">
+      <div class="section-header">
+        <span class="section-tag mono">04 — Journal</span>
+        <h2 class="section-title">Thinking<br/>out loud</h2>
+      </div>
+
+      <div class="journal-grid">
+
+        <article class="journal-card journal-card--large">
+          <div class="journal-card__meta">
+            <span class="mono journal-date">May 2025</span>
+            <span class="tag">Design Thinking</span>
+          </div>
+          <h3 class="journal-card__title">On the quiet power of restraint in visual identity</h3>
+          <p class="journal-card__excerpt">The brands that last aren't the loudest. They're the ones that know exactly what to leave out.</p>
+          <a href="#" class="work-card__link mono">Read Essay →</a>
+        </article>
+
+        <article class="journal-card">
+          <div class="journal-card__meta">
+            <span class="mono journal-date">Mar 2025</span>
+            <span class="tag">Web</span>
+          </div>
+          <h3 class="journal-card__title">Why we stopped using CSS frameworks</h3>
+          <a href="#" class="work-card__link mono">Read →</a>
+        </article>
+
+        <article class="journal-card">
+          <div class="journal-card__meta">
+            <span class="mono journal-date">Jan 2025</span>
+            <span class="tag">Process</span>
+          </div>
+          <h3 class="journal-card__title">The brief is never the brief</h3>
+          <a href="#" class="work-card__link mono">Read →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ───── CONTACT ───── -->
+    <section class="contact-section" id="contact" aria-label="Contact">
+      <div class="contact-inner">
+        <span class="section-tag mono">05 — Contact</span>
+        <h2 class="contact-title">
+          Got a project?<br/>
+          <em>Let's build it.</em>
+        </h2>
+        <p class="contact-body">
+          We take on a limited number of projects each quarter. If you have something worth making, we'd love to hear about it.
+        </p>
+        <a href="mailto:khaliqtaimoor6@gmail.com" class="btn-primary btn-large">khaliqtaimoor6@gmail.com</a>
+        <div class="contact-socials">
+          <a href="#" class="mono" aria-label="Twitter/X">X (Twitter)</a>
+          <span aria-hidden="true">·</span>
+          <a href="#" class="mono" aria-label="Instagram">Instagram</a>
+          <span aria-hidden="true">·</span>
+          <a href="#" class="mono" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo mono">FOLIO STUDIO</span>
+      <span class="footer-copy mono">© 2025 — All rights reserved</span>
+      <span class="footer-location mono">Based in London &amp; Remote</span>
+    </div>
+  </footer>
+
+</body>
+</html>
